@@ -1,0 +1,21 @@
+{
+  "profiles": {
+    "SensorDataFunction": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7116",
+      "environmentVariables": {
+        "mqtt__brokerurl": <mqtt broker url>,
+        "mqtt__port":  <mqtt broker port>,
+        "mqtt__username":  <mqtt broker username>,
+        "mqtt__password":  <mqtt broker password>
+      }
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "containerRunArguments": "--init",
+      "httpPort": 33554,
+      "useSSL": false
+    }
+  }
+}
